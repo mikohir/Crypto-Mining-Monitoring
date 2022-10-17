@@ -1,3 +1,4 @@
 # Crypto-Mining-Monitoring
-ICT-infrastructure project
+ICT-infrastructure project  
 Miko Hirvelä
+
