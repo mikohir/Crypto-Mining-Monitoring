@@ -25,10 +25,7 @@ def hiveos_requests():
 
     #Extracting keys from the API
     hiveos_api_keys_worker_1 = hiveos_api_worker_1.json()
-    hiveos_api_keys_worker_1.keys()
-
     hiveos_api_keys_worker_2 = hiveos_api_worker_2.json()
-    hiveos_api_keys_worker_2.keys()
 
     #Function for changing large numbers to Kilos, Megas etc.
     def hashrate_format(number):
