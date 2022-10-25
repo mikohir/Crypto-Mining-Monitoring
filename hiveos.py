@@ -34,151 +34,161 @@ def hiveos_requests():
         magnitude = int(floor(log(number, k)))
         return '%.2f%s' % (number / k**magnitude, units[magnitude])
 
-    def hiveos_worker_1():
+ 
 
-        #Worker 1 GPU 0 data
-        worker_1_gpu_0_name = "GPU 0: RX 5700 MSI Mech: "
-        worker_1_gpu_0_hashrate = hiveos_api_keys_worker_1["gpu_stats"][0]["hash"]
-        worker_1_gpu_0_power = str(hiveos_api_keys_worker_1["gpu_stats"][0]["power"]) + " W"
-        worker_1_gpu_0_fan = str(hiveos_api_keys_worker_1["gpu_stats"][0]["fan"]) + " %"
-        worker_1_gpu_0_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][0]["temp"]) + " °C"
-        worker_1_gpu_0_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][0]["memtemp"]) + " °C"
+    #Worker 1 GPU 0 data
+    worker_1_gpu_0_name = "GPU 0: RX 5700 MSI Mech: "
+    worker_1_gpu_0_hashrate = hiveos_api_keys_worker_1["gpu_stats"][0]["hash"]
+    worker_1_gpu_0_power = str(hiveos_api_keys_worker_1["gpu_stats"][0]["power"]) + " W"
+    worker_1_gpu_0_fan = str(hiveos_api_keys_worker_1["gpu_stats"][0]["fan"]) + " %"
+    worker_1_gpu_0_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][0]["temp"]) + " °C"
+    worker_1_gpu_0_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][0]["memtemp"]) + " °C"
 
-        worker_1_gpu_0_stats = [worker_1_gpu_0_name, hashrate_format(worker_1_gpu_0_hashrate), worker_1_gpu_0_coretemp, worker_1_gpu_0_memtemp, worker_1_gpu_0_fan, worker_1_gpu_0_power] 
+    worker_1_gpu_0_stats = [worker_1_gpu_0_name, hashrate_format(worker_1_gpu_0_hashrate), worker_1_gpu_0_coretemp, worker_1_gpu_0_memtemp, worker_1_gpu_0_fan, worker_1_gpu_0_power] 
 
-        #Worker 1 GPU 1 data
-        worker_1_gpu_1_name = "GPU 1: RX 5700 Gigabyte OC: "
-        worker_1_gpu_1_hashrate = hiveos_api_keys_worker_1["gpu_stats"][1]["hash"]
-        worker_1_gpu_1_power = str(hiveos_api_keys_worker_1["gpu_stats"][1]["power"]) + " W"
-        worker_1_gpu_1_fan = str(hiveos_api_keys_worker_1["gpu_stats"][1]["fan"]) + " %"
-        worker_1_gpu_1_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][1]["temp"]) + " °C"
-        worker_1_gpu_1_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][1]["memtemp"]) + " °C"
+    #Worker 1 GPU 1 data
+    worker_1_gpu_1_name = "GPU 1: RX 5700 Gigabyte OC: "
+    worker_1_gpu_1_hashrate = hiveos_api_keys_worker_1["gpu_stats"][1]["hash"]
+    worker_1_gpu_1_power = str(hiveos_api_keys_worker_1["gpu_stats"][1]["power"]) + " W"
+    worker_1_gpu_1_fan = str(hiveos_api_keys_worker_1["gpu_stats"][1]["fan"]) + " %"
+    worker_1_gpu_1_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][1]["temp"]) + " °C"
+    worker_1_gpu_1_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][1]["memtemp"]) + " °C"
 
-        worker_1_gpu_1_stats = [worker_1_gpu_1_name, hashrate_format(worker_1_gpu_1_hashrate), worker_1_gpu_1_coretemp, worker_1_gpu_1_memtemp, worker_1_gpu_1_fan, worker_1_gpu_1_power]
+    worker_1_gpu_1_stats = [worker_1_gpu_1_name, hashrate_format(worker_1_gpu_1_hashrate), worker_1_gpu_1_coretemp, worker_1_gpu_1_memtemp, worker_1_gpu_1_fan, worker_1_gpu_1_power]
 
-        #Worker 1 GPU 2 data
-        worker_1_gpu_2_name = "GPU 2: RX 5700 Powercolor Red Dragon: "
-        worker_1_gpu_2_hashrate = hiveos_api_keys_worker_1["gpu_stats"][2]["hash"]
-        worker_1_gpu_2_power = str(hiveos_api_keys_worker_1["gpu_stats"][2]["power"]) + " W"
-        worker_1_gpu_2_fan = str(hiveos_api_keys_worker_1["gpu_stats"][2]["fan"]) + " %"
-        worker_1_gpu_2_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][2]["temp"]) + " °C"
-        worker_1_gpu_2_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][2]["memtemp"]) + " °C"
+    #Worker 1 GPU 2 data
+    worker_1_gpu_2_name = "GPU 2: RX 5700 Powercolor Red Dragon: "
+    worker_1_gpu_2_hashrate = hiveos_api_keys_worker_1["gpu_stats"][2]["hash"]
+    worker_1_gpu_2_power = str(hiveos_api_keys_worker_1["gpu_stats"][2]["power"]) + " W"
+    worker_1_gpu_2_fan = str(hiveos_api_keys_worker_1["gpu_stats"][2]["fan"]) + " %"
+    worker_1_gpu_2_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][2]["temp"]) + " °C"
+    worker_1_gpu_2_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][2]["memtemp"]) + " °C"
 
-        worker_1_gpu_2_stats = [worker_1_gpu_2_name, hashrate_format(worker_1_gpu_2_hashrate), worker_1_gpu_2_coretemp, worker_1_gpu_2_memtemp, worker_1_gpu_2_fan, worker_1_gpu_2_power]
+    worker_1_gpu_2_stats = [worker_1_gpu_2_name, hashrate_format(worker_1_gpu_2_hashrate), worker_1_gpu_2_coretemp, worker_1_gpu_2_memtemp, worker_1_gpu_2_fan, worker_1_gpu_2_power]
 
-        #Worker 1 GPU 3 data
-        worker_1_gpu_3_name = "GPU 3: RX 5700 ASUS Strix: "
-        worker_1_gpu_3_hashrate = hiveos_api_keys_worker_1["gpu_stats"][3]["hash"]
-        worker_1_gpu_3_power = str(hiveos_api_keys_worker_1["gpu_stats"][3]["power"]) + " W"
-        worker_1_gpu_3_fan = str(hiveos_api_keys_worker_1["gpu_stats"][3]["fan"]) + " %"
-        worker_1_gpu_3_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][3]["temp"]) + " °C"
-        worker_1_gpu_3_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][3]["memtemp"]) + " °C"
+    #Worker 1 GPU 3 data
+    worker_1_gpu_3_name = "GPU 3: RX 5700 ASUS Strix: "
+    worker_1_gpu_3_hashrate = hiveos_api_keys_worker_1["gpu_stats"][3]["hash"]
+    worker_1_gpu_3_power = str(hiveos_api_keys_worker_1["gpu_stats"][3]["power"]) + " W"
+    worker_1_gpu_3_fan = str(hiveos_api_keys_worker_1["gpu_stats"][3]["fan"]) + " %"
+    worker_1_gpu_3_coretemp = str(hiveos_api_keys_worker_1["gpu_stats"][3]["temp"]) + " °C"
+    worker_1_gpu_3_memtemp = str(hiveos_api_keys_worker_1["gpu_stats"][3]["memtemp"]) + " °C"
 
-        worker_1_gpu_3_stats = [worker_1_gpu_3_name, hashrate_format(worker_1_gpu_3_hashrate), worker_1_gpu_3_coretemp, worker_1_gpu_3_memtemp, worker_1_gpu_3_fan, worker_1_gpu_3_power]
+    worker_1_gpu_3_stats = [worker_1_gpu_3_name, hashrate_format(worker_1_gpu_3_hashrate), worker_1_gpu_3_coretemp, worker_1_gpu_3_memtemp, worker_1_gpu_3_fan, worker_1_gpu_3_power]
 
-        #Create a list of all the different GPUs
-        gpu_list = [worker_1_gpu_0_stats, worker_1_gpu_1_stats, worker_1_gpu_2_stats, worker_1_gpu_3_stats]
+    #Create a list of all the different GPUs
+    gpu_list = ["Rig 1:", worker_1_gpu_0_stats, worker_1_gpu_1_stats, worker_1_gpu_2_stats, worker_1_gpu_3_stats, " "]
 
-        #Print out the GPU list in seperate lines
-        print("Worker 1:")
-        print(*gpu_list, sep="\n")
+    #Print out the GPU list in seperate lines
+    print(*gpu_list, sep="\n")
 
-    hiveos_worker_1()
-
-    def hiveos_worker_2():
-        
-        #Worker 2 GPU 0 data
-        worker_2_gpu_0_name = "GPU 0: RTX 3070 Ti ASUS TUF: "
-        worker_2_gpu_0_hashrate = hiveos_api_keys_worker_2["gpu_stats"][0]["hash"]
-        worker_2_gpu_0_power = str(hiveos_api_keys_worker_2["gpu_stats"][0]["power"]) + " W"
-        worker_2_gpu_0_fan = str(hiveos_api_keys_worker_2["gpu_stats"][0]["fan"]) + " %"
-        worker_2_gpu_0_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][0]["temp"]) + " °C"
-        worker_2_gpu_0_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][0]["memtemp"]) + " °C"
-
-        worker_2_gpu_0_stats = [worker_2_gpu_0_name, hashrate_format(worker_2_gpu_0_hashrate), worker_2_gpu_0_coretemp, worker_2_gpu_0_memtemp, worker_2_gpu_0_fan, worker_2_gpu_0_power]
-        
-        #Worker 2 GPU 1 data
-        worker_2_gpu_1_name = "GPU 1: GTX 1660 Super MSI Ventus: "
-        worker_2_gpu_1_hashrate = hiveos_api_keys_worker_2["gpu_stats"][1]["hash"]
-        worker_2_gpu_1_power = str(hiveos_api_keys_worker_2["gpu_stats"][1]["power"]) + " W"
-        worker_2_gpu_1_fan = str(hiveos_api_keys_worker_2["gpu_stats"][1]["fan"]) + " %"
-        worker_2_gpu_1_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][1]["temp"]) + " °C"
-        worker_2_gpu_1_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][1]["memtemp"]) + " °C"
 
         
-        worker_2_gpu_1_stats = [worker_2_gpu_1_name, hashrate_format(worker_2_gpu_1_hashrate), worker_2_gpu_1_coretemp, worker_2_gpu_1_memtemp, worker_2_gpu_1_fan, worker_2_gpu_1_power] 
+    #Worker 2 GPU 0 data
+    worker_2_gpu_0_name = "GPU 0: RTX 3070 Ti ASUS TUF: "
+    worker_2_gpu_0_hashrate = hiveos_api_keys_worker_2["gpu_stats"][0]["hash"]
+    worker_2_gpu_0_power = str(hiveos_api_keys_worker_2["gpu_stats"][0]["power"]) + " W"
+    worker_2_gpu_0_fan = str(hiveos_api_keys_worker_2["gpu_stats"][0]["fan"]) + " %"
+    worker_2_gpu_0_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][0]["temp"]) + " °C"
+    worker_2_gpu_0_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][0]["memtemp"]) + " °C"
 
-        #Worker 2 GPU 2 data
-        worker_2_gpu_2_name = "GPU 2: RTX 3070 Ti ASUS TUF: "
-        worker_2_gpu_2_hashrate = hiveos_api_keys_worker_2["gpu_stats"][2]["hash"]
-        worker_2_gpu_2_power = str(hiveos_api_keys_worker_2["gpu_stats"][2]["power"]) + " W"
-        worker_2_gpu_2_fan = str(hiveos_api_keys_worker_2["gpu_stats"][2]["fan"]) + " %"
-        worker_2_gpu_2_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][2]["temp"]) + " °C"
-        worker_2_gpu_2_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][2]["memtemp"]) + " °C"
-
-        worker_2_gpu_2_stats = [worker_2_gpu_2_name, hashrate_format(worker_2_gpu_2_hashrate), worker_2_gpu_2_coretemp, worker_2_gpu_2_memtemp, worker_2_gpu_2_fan, worker_2_gpu_2_power]
-
-        #Worker 2 GPU 3 data
-        worker_2_gpu_3_name = "GPU 3: GTX 1660 Super MSI Gaming X: "
-        worker_2_gpu_3_hashrate = hiveos_api_keys_worker_2["gpu_stats"][3]["hash"]
-        worker_2_gpu_3_power = str(hiveos_api_keys_worker_2["gpu_stats"][3]["power"]) + " W"
-        worker_2_gpu_3_fan = str(hiveos_api_keys_worker_2["gpu_stats"][3]["fan"]) + " %"
-        worker_2_gpu_3_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][3]["temp"]) + " °C"
-        worker_2_gpu_3_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][3]["memtemp"]) + " °C"
-
-        worker_2_gpu_3_stats = [worker_2_gpu_3_name, hashrate_format(worker_2_gpu_3_hashrate), worker_2_gpu_3_coretemp, worker_2_gpu_3_memtemp, worker_2_gpu_3_fan, worker_2_gpu_3_power]
-
-        #Worker 2 GPU 4 data
-        worker_2_gpu_4_name = "GPU 4: GTX 1660 Super HP OEM: "
-        worker_2_gpu_4_hashrate = hiveos_api_keys_worker_2["gpu_stats"][4]["hash"]
-        worker_2_gpu_4_power = str(hiveos_api_keys_worker_2["gpu_stats"][4]["power"]) + " W"
-        worker_2_gpu_4_fan = str(hiveos_api_keys_worker_2["gpu_stats"][4]["fan"]) + " %"
-        worker_2_gpu_4_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][4]["temp"]) + " °C"
-        worker_2_gpu_4_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][4]["memtemp"]) + " °C"
-
-        worker_2_gpu_4_stats = [worker_2_gpu_4_name, hashrate_format(worker_2_gpu_4_hashrate), worker_2_gpu_4_coretemp, worker_2_gpu_4_memtemp, worker_2_gpu_4_fan, worker_2_gpu_4_power]
-
-        #Worker 2 GPU 5 data
-        worker_2_gpu_5_name = "GPU 5: GTX 1660 Super ASUS TUF: "
-        worker_2_gpu_5_hashrate = hiveos_api_keys_worker_2["gpu_stats"][5]["hash"]
-        worker_2_gpu_5_power = str(hiveos_api_keys_worker_2["gpu_stats"][5]["power"]) + " W"
-        worker_2_gpu_5_fan = str(hiveos_api_keys_worker_2["gpu_stats"][5]["fan"]) + " %"
-        worker_2_gpu_5_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][5]["temp"]) + " °C"
-        worker_2_gpu_5_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][5]["memtemp"]) + " °C"
-
-        worker_2_gpu_5_stats = [worker_2_gpu_5_name, hashrate_format(worker_2_gpu_5_hashrate), worker_2_gpu_5_coretemp, worker_2_gpu_5_memtemp, worker_2_gpu_5_fan, worker_2_gpu_5_power]
-
-        #Worker 2 GPU 6 data
-        worker_2_gpu_6_name = "GPU 6: GTX 1660 Super ASUS Phoenix: "
-        worker_2_gpu_6_hashrate = hiveos_api_keys_worker_2["gpu_stats"][6]["hash"]
-        worker_2_gpu_6_power = str(hiveos_api_keys_worker_2["gpu_stats"][6]["power"]) + " W"
-        worker_2_gpu_6_fan = str(hiveos_api_keys_worker_2["gpu_stats"][6]["fan"]) + " %"
-        worker_2_gpu_6_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][6]["temp"]) + " °C"
-        worker_2_gpu_6_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][6]["memtemp"]) + " °C"
-
-        worker_2_gpu_6_stats = [worker_2_gpu_6_name, hashrate_format(worker_2_gpu_6_hashrate), worker_2_gpu_6_coretemp, worker_2_gpu_6_memtemp, worker_2_gpu_6_fan, worker_2_gpu_6_power]
+    worker_2_gpu_0_stats = [worker_2_gpu_0_name, hashrate_format(worker_2_gpu_0_hashrate), worker_2_gpu_0_coretemp, worker_2_gpu_0_memtemp, worker_2_gpu_0_fan, worker_2_gpu_0_power]
         
-        #Worker 2 GPU 7 data
-        worker_2_gpu_7_name = "GPU 7: GTX 1660 Super ASUS TUF: "
-        worker_2_gpu_7_hashrate = hiveos_api_keys_worker_2["gpu_stats"][7]["hash"]
-        worker_2_gpu_7_power = str(hiveos_api_keys_worker_2["gpu_stats"][7]["power"]) + " W"
-        worker_2_gpu_7_fan = str(hiveos_api_keys_worker_2["gpu_stats"][7]["fan"]) + " %"
-        worker_2_gpu_7_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][7]["temp"]) + " °C"
-        worker_2_gpu_7_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][7]["memtemp"]) + " °C"
+    #Worker 2 GPU 1 data
+    worker_2_gpu_1_name = "GPU 1: GTX 1660 Super MSI Ventus: "
+    worker_2_gpu_1_hashrate = hiveos_api_keys_worker_2["gpu_stats"][1]["hash"]
+    worker_2_gpu_1_power = str(hiveos_api_keys_worker_2["gpu_stats"][1]["power"]) + " W"
+    worker_2_gpu_1_fan = str(hiveos_api_keys_worker_2["gpu_stats"][1]["fan"]) + " %"
+    worker_2_gpu_1_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][1]["temp"]) + " °C"
+    worker_2_gpu_1_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][1]["memtemp"]) + " °C"
 
-        worker_2_gpu_7_stats = [worker_2_gpu_7_name, hashrate_format(worker_2_gpu_7_hashrate), worker_2_gpu_7_coretemp, worker_2_gpu_7_memtemp, worker_2_gpu_7_fan, worker_2_gpu_7_power]
+        
+    worker_2_gpu_1_stats = [worker_2_gpu_1_name, hashrate_format(worker_2_gpu_1_hashrate), worker_2_gpu_1_coretemp, worker_2_gpu_1_memtemp, worker_2_gpu_1_fan, worker_2_gpu_1_power] 
+
+    #Worker 2 GPU 2 data
+    worker_2_gpu_2_name = "GPU 2: RTX 3070 Ti ASUS TUF: "
+    worker_2_gpu_2_hashrate = hiveos_api_keys_worker_2["gpu_stats"][2]["hash"]
+    worker_2_gpu_2_power = str(hiveos_api_keys_worker_2["gpu_stats"][2]["power"]) + " W"
+    worker_2_gpu_2_fan = str(hiveos_api_keys_worker_2["gpu_stats"][2]["fan"]) + " %"
+    worker_2_gpu_2_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][2]["temp"]) + " °C"
+    worker_2_gpu_2_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][2]["memtemp"]) + " °C"
+
+    worker_2_gpu_2_stats = [worker_2_gpu_2_name, hashrate_format(worker_2_gpu_2_hashrate), worker_2_gpu_2_coretemp, worker_2_gpu_2_memtemp, worker_2_gpu_2_fan, worker_2_gpu_2_power]
+
+    #Worker 2 GPU 3 data
+    worker_2_gpu_3_name = "GPU 3: GTX 1660 Super MSI Gaming X: "
+    worker_2_gpu_3_hashrate = hiveos_api_keys_worker_2["gpu_stats"][3]["hash"]
+    worker_2_gpu_3_power = str(hiveos_api_keys_worker_2["gpu_stats"][3]["power"]) + " W"
+    worker_2_gpu_3_fan = str(hiveos_api_keys_worker_2["gpu_stats"][3]["fan"]) + " %"
+    worker_2_gpu_3_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][3]["temp"]) + " °C"
+    worker_2_gpu_3_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][3]["memtemp"]) + " °C"
+
+    worker_2_gpu_3_stats = [worker_2_gpu_3_name, hashrate_format(worker_2_gpu_3_hashrate), worker_2_gpu_3_coretemp, worker_2_gpu_3_memtemp, worker_2_gpu_3_fan, worker_2_gpu_3_power]
+
+    #Worker 2 GPU 4 data
+    worker_2_gpu_4_name = "GPU 4: GTX 1660 Super HP OEM: "
+    worker_2_gpu_4_hashrate = hiveos_api_keys_worker_2["gpu_stats"][4]["hash"]
+    worker_2_gpu_4_power = str(hiveos_api_keys_worker_2["gpu_stats"][4]["power"]) + " W"
+    worker_2_gpu_4_fan = str(hiveos_api_keys_worker_2["gpu_stats"][4]["fan"]) + " %"
+    worker_2_gpu_4_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][4]["temp"]) + " °C"
+    worker_2_gpu_4_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][4]["memtemp"]) + " °C"
+
+    worker_2_gpu_4_stats = [worker_2_gpu_4_name, hashrate_format(worker_2_gpu_4_hashrate), worker_2_gpu_4_coretemp, worker_2_gpu_4_memtemp, worker_2_gpu_4_fan, worker_2_gpu_4_power]
+
+    #Worker 2 GPU 5 data
+    worker_2_gpu_5_name = "GPU 5: GTX 1660 Super ASUS TUF: "
+    worker_2_gpu_5_hashrate = hiveos_api_keys_worker_2["gpu_stats"][5]["hash"]
+    worker_2_gpu_5_power = str(hiveos_api_keys_worker_2["gpu_stats"][5]["power"]) + " W"
+    worker_2_gpu_5_fan = str(hiveos_api_keys_worker_2["gpu_stats"][5]["fan"]) + " %"
+    worker_2_gpu_5_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][5]["temp"]) + " °C"
+    worker_2_gpu_5_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][5]["memtemp"]) + " °C"
+
+    worker_2_gpu_5_stats = [worker_2_gpu_5_name, hashrate_format(worker_2_gpu_5_hashrate), worker_2_gpu_5_coretemp, worker_2_gpu_5_memtemp, worker_2_gpu_5_fan, worker_2_gpu_5_power]
+
+    #Worker 2 GPU 6 data
+    worker_2_gpu_6_name = "GPU 6: GTX 1660 Super ASUS Phoenix: "
+    worker_2_gpu_6_hashrate = hiveos_api_keys_worker_2["gpu_stats"][6]["hash"]
+    worker_2_gpu_6_power = str(hiveos_api_keys_worker_2["gpu_stats"][6]["power"]) + " W"
+    worker_2_gpu_6_fan = str(hiveos_api_keys_worker_2["gpu_stats"][6]["fan"]) + " %"
+    worker_2_gpu_6_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][6]["temp"]) + " °C"
+    worker_2_gpu_6_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][6]["memtemp"]) + " °C"
+
+    worker_2_gpu_6_stats = [worker_2_gpu_6_name, hashrate_format(worker_2_gpu_6_hashrate), worker_2_gpu_6_coretemp, worker_2_gpu_6_memtemp, worker_2_gpu_6_fan, worker_2_gpu_6_power]
+        
+    #Worker 2 GPU 7 data
+    worker_2_gpu_7_name = "GPU 7: GTX 1660 Super ASUS TUF: "
+    worker_2_gpu_7_hashrate = hiveos_api_keys_worker_2["gpu_stats"][7]["hash"]
+    worker_2_gpu_7_power = str(hiveos_api_keys_worker_2["gpu_stats"][7]["power"]) + " W"
+    worker_2_gpu_7_fan = str(hiveos_api_keys_worker_2["gpu_stats"][7]["fan"]) + " %"
+    worker_2_gpu_7_coretemp = str(hiveos_api_keys_worker_2["gpu_stats"][7]["temp"]) + " °C"
+    worker_2_gpu_7_memtemp = str(hiveos_api_keys_worker_2["gpu_stats"][7]["memtemp"]) + " °C"
+
+    worker_2_gpu_7_stats = [worker_2_gpu_7_name, hashrate_format(worker_2_gpu_7_hashrate), worker_2_gpu_7_coretemp, worker_2_gpu_7_memtemp, worker_2_gpu_7_fan, worker_2_gpu_7_power]
         
         
         
         
-        #Create a list of all the different GPUs
-        gpu_list_2 = [worker_2_gpu_0_stats, worker_2_gpu_1_stats, worker_2_gpu_2_stats, worker_2_gpu_3_stats, worker_2_gpu_4_stats, worker_2_gpu_5_stats, worker_2_gpu_6_stats, worker_2_gpu_7_stats]
+    #Create a list of all the different GPUs
+    gpu_list_2 = ["Rig 2:", worker_2_gpu_0_stats, worker_2_gpu_1_stats, worker_2_gpu_2_stats, worker_2_gpu_3_stats, worker_2_gpu_4_stats, worker_2_gpu_5_stats, worker_2_gpu_6_stats, worker_2_gpu_7_stats, " "]
 
-        #Print out the GPU list in separate lines
-        print("Worker 2:")
-        print(*gpu_list_2, sep="\n")
+    #Print out the GPU list in separate lines
+    print(*gpu_list_2, sep="\n")
 
-    hiveos_worker_2()
+
+
+
+
+    #Create a text file of all output
+    with open("hiveos_output.txt", "w") as hiveos_output_file:
+        for item in gpu_list:
+            #write all items in the list in separate lines
+            hiveos_output_file.write("%s\n" % item)
+        for item in gpu_list_2:
+            hiveos_output_file.write("%s\n" % item)
+
+
+
+
 
 if __name__ == '__main__':
     hiveos_requests()
