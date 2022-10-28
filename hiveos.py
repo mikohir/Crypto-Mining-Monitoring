@@ -17,17 +17,21 @@ def hiveos_requests():
     #The base URL for the API, which we use as a base to navigate to different endpoints
     base_url = "https://api2.hiveos.farm/api/v2"
 
-    #The endpoints for worker related data 
+    #The endpoints for farm and worker(s) related data 
     endpoint_worker_1 = base_url + "/farms/{0}/workers/{1}".format(credentials.farm_id, credentials.worker_1_id)
     endpoint_worker_2 = base_url + "/farms/{0}/workers/{1}".format(credentials.farm_id, credentials.worker_2_id)
+    endpoint_farm = base_url + "/farms/{0}".format(credentials.farm_id)
 
     #Request for the said endpoints
     hiveos_api_worker_1 = get(endpoint_worker_1, headers=headers)
     hiveos_api_worker_2 = get(endpoint_worker_2, headers=headers)
+    hiveos_api_farm = get(endpoint_farm, headers=headers)
 
     #Extracting keys from the API
     hiveos_api_keys_worker_1 = hiveos_api_worker_1.json()
     hiveos_api_keys_worker_2 = hiveos_api_worker_2.json()
+    hiveos_api_keys_farm = hiveos_api_farm.json()
+   
 
     #Function for changing large numbers to Kilos, Megas etc.
     def hashrate_format(number):
@@ -35,8 +39,6 @@ def hiveos_requests():
         k = 1000.0
         magnitude = int(floor(log(number, k)))
         return '%.2f%s' % (number / k**magnitude, units[magnitude])
-
- 
 
     #Worker 1 GPU 0 data
     worker_1_gpu_0_name = "GPU 0: RX 5700 MSI Mech: "
@@ -178,10 +180,24 @@ def hiveos_requests():
 
 
 
+    #Create a text file of all output and make it look like a table with tabulate, one file for each worker and farm
 
+    #Total stats
+    total_gpus = str(hiveos_api_keys_farm["stats"]["gpus_online"])
+    total_hash = str(hashrate_format(hiveos_api_keys_farm["hashrates"][0]["hashrate"]))
+    total_power = str(hiveos_api_keys_farm["stats"]["power_draw"]) + " W"
 
-    #Create a text file of all output and make it look like a table with tabulate, one file for each worker
+    
+    
 
+    #Create a text file of all output and make it look like a table with tabulate, one file for each worker and farm
+
+    #Farm total
+    with open("hiveos_output_total.txt", "w", encoding="utf-8") as hiveos_output_file_total:
+        hiveos_output_file_total.write(f"GPUs: {total_gpus}\n")
+        hiveos_output_file_total.write(f"Hashrate: {total_hash}\n")
+        hiveos_output_file_total.write(f"Power: {total_power}")
+    
     #Worker 1
     with open("hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
         hiveos_output_file_worker_1.write(tabulate(gpu_list, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
