@@ -4,6 +4,8 @@ from math import log, floor
 #File with sensitive information needed for the script
 import credentials
 
+#Function for making pretty tables
+from tabulate import tabulate
 
 def hiveos_requests():
 
@@ -77,7 +79,7 @@ def hiveos_requests():
     worker_1_gpu_3_stats = [worker_1_gpu_3_name, hashrate_format(worker_1_gpu_3_hashrate), worker_1_gpu_3_coretemp, worker_1_gpu_3_memtemp, worker_1_gpu_3_fan, worker_1_gpu_3_power]
 
     #Create a list of all the different GPUs
-    gpu_list = ["Rig 1:", worker_1_gpu_0_stats, worker_1_gpu_1_stats, worker_1_gpu_2_stats, worker_1_gpu_3_stats, " "]
+    gpu_list = [worker_1_gpu_0_stats, worker_1_gpu_1_stats, worker_1_gpu_2_stats, worker_1_gpu_3_stats]
 
     #Print out the GPU list in seperate lines
     print(*gpu_list, sep="\n")
@@ -169,7 +171,7 @@ def hiveos_requests():
         
         
     #Create a list of all the different GPUs
-    gpu_list_2 = ["Rig 2:", worker_2_gpu_0_stats, worker_2_gpu_1_stats, worker_2_gpu_2_stats, worker_2_gpu_3_stats, worker_2_gpu_4_stats, worker_2_gpu_5_stats, worker_2_gpu_6_stats, worker_2_gpu_7_stats, " "]
+    gpu_list_2 = [worker_2_gpu_0_stats, worker_2_gpu_1_stats, worker_2_gpu_2_stats, worker_2_gpu_3_stats, worker_2_gpu_4_stats, worker_2_gpu_5_stats, worker_2_gpu_6_stats, worker_2_gpu_7_stats]
 
     #Print out the GPU list in separate lines
     print(*gpu_list_2, sep="\n")
@@ -178,14 +180,15 @@ def hiveos_requests():
 
 
 
-    #Create a text file of all output
-    with open("hiveos_output.txt", "w") as hiveos_output_file:
-        for item in gpu_list:
-            #write all items in the list in separate lines
-            hiveos_output_file.write("%s\n" % item)
-        for item in gpu_list_2:
-            hiveos_output_file.write("%s\n" % item)
+    #Create a text file of all output and make it look like a table with tabulate, one file for each worker
 
+    #Worker 1
+    with open("hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
+        hiveos_output_file_worker_1.write(tabulate(gpu_list, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
+
+    #Worker 2
+    with open("hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
+        hiveos_output_file_worker_2.write(tabulate(gpu_list_2, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
 
 
 
