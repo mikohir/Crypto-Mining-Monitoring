@@ -14,12 +14,14 @@
     background-color:rgb(134, 134, 134);
     text-align: center;
     color: white;
+    width: 100%;
   }
   
   /* Style the top navigation bar */
   .navbar {
     display: flex;
     background-color: #333;
+    width: 100%;
   }
   
   /* Style the navigation bar links */
@@ -56,20 +58,26 @@
     background-color: rgb(216, 216, 216);
     padding: 20px;
     height: auto;
+    width: 100%;
   }
   
   /* txt files as embed */
   .herominers_txt {
     background-color: #f1f1f1;
-    width: 100%;
     padding: 0px;
   }
  
   .hiveos_txt {
+    display: flexbox;
     background-color: rgb(216, 216, 216);
-    width: 100%;
     padding: 0px;
-  }  
+  } 
+
+  .img {
+    background-color: rgb(240, 0, 0);
+    width: 100%;
+    padding: 20px;
+  }
   
   /* Footer */
   .footer {
@@ -77,8 +85,6 @@
     text-align: center;
     background: #333;
     color: white;
-    position: fixed;
-    bottom: 0;
     width: 100%;
   }
   
@@ -86,5 +92,6 @@
   @media screen and (max-width: 700px) {
     .row, .navbar {   
       flex-direction: column;
+      width: 100%;
     }
-}
+  }

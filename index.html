@@ -4,7 +4,7 @@
 <title>Page Title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="copied_css.css">
+<link rel="stylesheet" href="index.css">
 </head>
 
 <body>
@@ -15,7 +15,7 @@
       <p>Current Time</p>
       <!-- Current Time -->
       <p><span id="time"> </span></p>
-      <script src="/Koodit/Tests/index.js"> </script>
+      <script src="index.js"> </script>
     </div>
     
     <!-- Navigation Bar -->
@@ -30,7 +30,7 @@
         <h2>Pool Stats</h2>
         <h5>Herominers:</h5>
         <div class="herominers_txt" style="height: 230px;">
-            <embed type="text/html" src="/Koodit/Tests/herominers_output.txt" height="100%"> </embed>
+            <object type="text/html" data="herominers_output.txt" height="100%"> </object>
         </div>
         <h3>Other</h3>
         <div class="embed" style="height:60px;">TBD</div><br>
@@ -39,25 +39,25 @@
       <!-- Main -->
       <div class="main">
         <h2>HiveOS</h2>
-        <div class="hiveos_txt" style="height: 110px;">
+        <div class="hiveos_txt">
             <p>Total:</p>
-            <embed type="text/html" src="/Koodit/Tests/hiveos_output_total.txt" height="200" width="100%"> </embed>
+            <object type="text/html" data="hiveos_output_total.txt" height="110"> </object>
         </div>
-        <div class="hiveos_txt" style="height: 220px;">
+        <div class="hiveos_txt">
             <p>Rig 1:</p>
-            <embed type="text/html" src="/Koodit/Tests/hiveos_output_worker_1.txt" height="300" width="100%"> </embed>
+            <object type="text/html" data="hiveos_output_worker_1.txt" height="250" width="770"> </object>
         </div>
-        <div class="hiveos_txt" style="height: 350px;">
+        <div class="hiveos_txt">
             <p>Rig 2:</p>
-            <embed type="text/html" src="/Koodit/Tests/hiveos_output_worker_2.txt" height="400" width="100%"> </embed>
+            <object type="text/html" data="hiveos_output_worker_2.txt" height="380" width="770"> </object>
         </div>
       </div>
     </div>
     
-    <!-- Footer -->
-    <div class="footer">
-      <p>Miko Hirvelä - 2022</p>
-    </div>
+     <!-- Footer -->
+     <div class="footer">
+       <p>Miko Hirvelä - 2022</p>
+     </div>
     
     </body>
     </html>
