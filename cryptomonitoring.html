@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>mikohirvela.fi</title>
+<title>Crypto Mining Monitoring</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="cryptomonitoring.css">
@@ -21,17 +21,18 @@
     <!-- Navigation Bar -->
     <div class="navbar">
       <a href="index.html">Home</a>
-      <a href="https://mikohirvela738080361.wordpress.com/" target="_blank" rel="noopener noreferrer">WordPress</a>
-      <a href="https://github.com/mikohir/Crypto-Mining-Monitoring" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://mikohirvela738080361.wordpress.com/" target="_blank" rel="noopener noreferrer">Documentation</a>
+      <a href="https://github.com/mikohir/Crypto-Mining-Monitoring" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
     
     <!-- The flexible grid (content) -->
     <div class="row">
       <div class="side">
         <h2>Pool Stats</h2>
-        <h5>Herominers:</h5>
+	<p style="font-size: 15px; width: 70%">These are the "live" stats from my mining pool called Herominers. The stats are updated once a minute via my python script.<br><br>These numbers are important to know because my pool hashrate (how "fast" my GPUs are mining) is what I'm getting paid for. If the numbers are super low (less than 100 MH per rig for example), something is wrong.<br><br>ERGO is just the crypto currency that I'm currently mining.</p>
+        <h4>Herominers stats:</h4>
         <div class="herominers_txt" style="height: 230px;">
-            <object type="text/html" data="herominers_output.txt" height="100%"> </object>
+            <object type="text/html" data="herominers_output.txt" height="225px"> </object>
         </div>
         <h3>Other</h3>
         <div class="embed" style="height:60px;">TBD</div><br>
@@ -40,6 +41,7 @@
       <!-- Main -->
       <div class="main">
         <h2>HiveOS</h2>
+	<p style="font-size: 15px; width: 60%">Here you can see the "live" stats of my GPU rigs from the OS they are running on, divided to Rigs and the GPUs inside the rigs.</p>
         <div class="hiveos_txt">
             <p>Total:</p>
             <object type="text/html" data="hiveos_output_total.txt" height="110"> </object>
