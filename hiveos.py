@@ -193,17 +193,17 @@ def hiveos_requests():
     #Create a text file of all output and make it look like a table with tabulate, one file for each worker and farm
 
     #Farm total
-    with open("hiveos_output_total.txt", "w", encoding="utf-8") as hiveos_output_file_total:
+    with open("/var/www/html/hiveos_output_total.txt", "w", encoding="utf-8") as hiveos_output_file_total:
         hiveos_output_file_total.write(f"GPUs: {total_gpus}\n")
         hiveos_output_file_total.write(f"Hashrate: {total_hash}\n")
         hiveos_output_file_total.write(f"Power: {total_power}")
     
     #Worker 1
-    with open("hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
+    with open("/var/www/html/hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
         hiveos_output_file_worker_1.write(tabulate(gpu_list, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
 
     #Worker 2
-    with open("hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
+    with open("/var/www/html/hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
         hiveos_output_file_worker_2.write(tabulate(gpu_list_2, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
 
 

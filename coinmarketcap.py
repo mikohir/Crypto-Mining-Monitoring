@@ -67,5 +67,5 @@ dot_list = ["DOT", polkadot_price, polkadot_percent_24h]
 combined_list = [btc_list, eth_list, erg_list, dot_list]
 
 #Output with tabulate
-with open("coinmarketcap_output.txt", "w", encoding="utf-8") as coinmarketcap_output_file:
+with open("/var/www/html/coinmarketcap_output.txt", "w", encoding="utf-8") as coinmarketcap_output_file:
     coinmarketcap_output_file.write(tabulate(combined_list, headers=["Coin", "Price", "24H +/-"], tablefmt="fancy_grid"))
