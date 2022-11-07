@@ -20,7 +20,7 @@
     
     <!-- Navigation Bar -->
     <div class="navbar">
-      <a href="index.html">Home</a>
+      <a href="index">Home</a>
       <a href="https://mikohirvela738080361.wordpress.com/" target="_blank" rel="noopener noreferrer">Documentation</a>
       <a href="https://github.com/mikohir/Crypto-Mining-Monitoring" target="_blank" rel="noopener noreferrer">Code</a>
     </div>
@@ -30,19 +30,28 @@
       <div class="side">
         <h2>Pool Stats</h2>
 	<p style="font-size: 15px; width: 90%">These are the "live" stats from my mining pool called Herominers. The stats are updated once a minute via my python script.<br><br>These numbers are important to know because my pool hashrate (how "fast" my GPUs are mining) is what I'm getting paid for. If the numbers are super low (less than 100 MH per rig for example), something is wrong.<br><br>ERGO is just the crypto currency that I'm currently mining.</p>
-        <h4>Herominers stats:</h4>
         <object type="text/html" data="herominers_output.txt" height="225px"></object>
         <h2>Crypto Prices</h2>
         <p style="font-size: 15px; width: 90%">The prices and price changes of the four cryptocurrencies that I like to follow.<br><br>This table is updated once an hour.</p>
-	<object type"text/html" data="coinmarketcap_output.txt" height="250px"></object> 
+	<object type"text/html" data="coinmarketcap_output.txt" height="250px"></object>
+	<h3>Profits</h3>
+	<p style="font-size: 15px; width: 90%">The amount of money I'm making/losing with this setup currently, on a daily basis. Based on the current price and difficulty of Ergo. Electricity costs are calculated from 0.1 € / kWh with usage of 26.4 kWh per day.<br><br>The numbers are updated once an hour.<br></p>
+	<object type="text/html" data="estimated_profits_output.txt" height="100px"></object> 
       </div>
 
       <!-- Main -->
       <div class="main">
         <h2>HiveOS</h2>
-	<p style="font-size: 15px; width: 60%">Here you can see the "live" stats of my GPU rigs from the OS they are running on, divided to Rigs and the GPUs inside the rigs.</p>
+	<p style="font-size: 15px; width: 60%">Here you can see the "live" stats of my GPU rigs from the OS they are running on, divided to Rigs and the GPUs inside the rigs. The tables are updated once a minute.
+	You might notice that some GPUs show 0 for their Mem Temp but these cards simply don't have a sensor for the memory temperature.<br>
+	<br>Here are  brief explanations of the different stats seen in the tables:<br><br>
+	<br><u>Hashrate:</u>	Implies how fast the GPU is mining. Higher number is better.<br>
+	<br><u>Core Temp:</u>	The temperature of the GPU core.<br>
+	<br><u>Mem Temp:</u>	The temperature of the GPU VRAM.<br>
+	<br><u>Fan:</u>		Current fan speed % out of it's max RPM of the GPU fans.<br>
+	<br><u>Power:</u>	Tells how many watts the GPU is currently consuming.<br></p>
         <div class="hiveos_txt">
-            <p>Total:</p>
+            <p><br>Total:</p>
             <object type="text/html" data="hiveos_output_total.txt" height="110"> </object>
         </div>
         <div class="hiveos_txt">
