@@ -70,7 +70,6 @@ body {
 }
  
 .hiveos_txt {
-  display: flexbox;
   background-color: rgb(216, 216, 216);
   padding: 0px;
 } 
@@ -141,8 +140,8 @@ body {
   background-color: #333;
   color: rgb(255, 179, 128);
   text-align: left;
-  border-radius: 4px;
   padding: 5px 0;
+  border-radius: 4px;
   
   /* Position the tooltip */
   position: absolute;
@@ -156,7 +155,11 @@ body {
   visibility: visible;
 }
 
-
+.object {
+  margin-top: 20px;
+  float: left;
+  clear: both;
+}
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {

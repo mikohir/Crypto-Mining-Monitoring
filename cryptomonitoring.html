@@ -40,22 +40,28 @@
           <span class="side-tooltiptext">The amount of money I'm making/losing with this setup currently, on a daily basis. Based on the current price and difficulty of Ergo. Electricity costs are calculated from 0.1 € / kWh with usage of 26.4 kWh per day.<br>
           <br>The numbers are updated once an hour.<br></span>
         </div>
-          <object type="text/html" data="estimated_profits_output.txt" height="100px"></object>
+	<div class="object">
+          <object type="text/html" data="estimated_profits_output.txt" height="100"></object>
+	</div>
         <!-- Tooltip for Crypto Prices -->
         <div class="side-tooltip"><a>Crypto Prices</a> 
           <i class="fa fa-circle-question"></i>
 	        <span class="side-tooltiptext">The prices and price changes of the four cryptocurrencies that I like to follow.<br>
           <br>This table is updated once an hour.</span>
         </div>
-	      <object type="text/html" data="coinmarketcap_output.txt" height="250px"></object>
-        <!-- Tooltip for Pool Stats -->
+	<div class="object">
+	  <object type="text/html" data="coinmarketcap_output.txt" height="250"></object>
+        </div>
+	<!-- Tooltip for Pool Stats -->
         <div class="side-tooltip"><a>Pool Stats</a> 
           <i class="fa fa-circle-question"></i>
 	        <span class="side-tooltiptext">These are the live stats from my mining pool called Herominers. The stats are updated once a minute via my python script.<br>
           <br>These numbers are important to know because my pool hashrate (how "fast" my GPUs are mining) is what I'm getting paid for. If the numbers are super low (less than 100 MH per rig for example), something is wrong.<br>
           <br>ERGO is just the crypto currency that I'm currently mining.</span>
         </div>
-        <object type="text/html" data="herominers_output.txt" height="225px"></object>
+	<div class="object">
+          <object type="text/html" data="herominers_output.txt" height="225"></object>
+	</div>
       </div>
 
 
@@ -79,11 +85,11 @@
           <object type="text/html" data="hiveos_output_total.txt" height="110"> </object>
         </div>
         <div class="hiveos_txt">
-          <p href="mining_gallery" target="_blank" rel="noopener noreferrer"></a>Rig 1:</p>
+          <p href="mining_gallery" target="_blank" rel="noopener noreferrer">Rig 1:</p>
           <object type="text/html" data="hiveos_output_worker_1.txt" height="250" width="770"> </object>
         </div>
         <div class="hiveos_txt">
-          <p href="pcgallery" target="_blank" rel="noopener noreferrer"></a>Rig 2:</p>
+          <p href="pcgallery" target="_blank" rel="noopener noreferrer">Rig 2:</p>
           <object type="text/html" data="hiveos_output_worker_2.txt" height="380" width="770"> </object>
         </div>
     </div>
