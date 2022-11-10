@@ -46,7 +46,7 @@ def hiveos_requests():
 
     try:
         #Worker 1 GPU 0 data
-        worker_1_gpu_0_name = "GPU 0: RX 5700 MSI Mech: "
+        worker_1_gpu_0_name = "GPU 0: RX 5700 XT MSI Mech: "
         worker_1_gpu_0_hashrate = hiveos_api_keys_worker_1["gpu_stats"][0]["hash"]
         worker_1_gpu_0_power = str(hiveos_api_keys_worker_1["gpu_stats"][0]["power"]) + " W"
         worker_1_gpu_0_fan = str(hiveos_api_keys_worker_1["gpu_stats"][0]["fan"]) + " %"
@@ -56,7 +56,7 @@ def hiveos_requests():
         worker_1_gpu_0_stats = [worker_1_gpu_0_name, hashrate_format(worker_1_gpu_0_hashrate), worker_1_gpu_0_coretemp, worker_1_gpu_0_memtemp, worker_1_gpu_0_fan, worker_1_gpu_0_power] 
 
         #Worker 1 GPU 1 data
-        worker_1_gpu_1_name = "GPU 1: RX 5700 Gigabyte OC: "
+        worker_1_gpu_1_name = "GPU 1: RX 5700 XT Gigabyte OC: "
         worker_1_gpu_1_hashrate = hiveos_api_keys_worker_1["gpu_stats"][1]["hash"]
         worker_1_gpu_1_power = str(hiveos_api_keys_worker_1["gpu_stats"][1]["power"]) + " W"
         worker_1_gpu_1_fan = str(hiveos_api_keys_worker_1["gpu_stats"][1]["fan"]) + " %"
@@ -66,7 +66,7 @@ def hiveos_requests():
         worker_1_gpu_1_stats = [worker_1_gpu_1_name, hashrate_format(worker_1_gpu_1_hashrate), worker_1_gpu_1_coretemp, worker_1_gpu_1_memtemp, worker_1_gpu_1_fan, worker_1_gpu_1_power]
 
         #Worker 1 GPU 2 data
-        worker_1_gpu_2_name = "GPU 2: RX 5700 Powercolor Red Dragon: "
+        worker_1_gpu_2_name = "GPU 2: RX 5700 XT Powercolor Red Dragon: "
         worker_1_gpu_2_hashrate = hiveos_api_keys_worker_1["gpu_stats"][2]["hash"]
         worker_1_gpu_2_power = str(hiveos_api_keys_worker_1["gpu_stats"][2]["power"]) + " W"
         worker_1_gpu_2_fan = str(hiveos_api_keys_worker_1["gpu_stats"][2]["fan"]) + " %"
@@ -76,7 +76,7 @@ def hiveos_requests():
         worker_1_gpu_2_stats = [worker_1_gpu_2_name, hashrate_format(worker_1_gpu_2_hashrate), worker_1_gpu_2_coretemp, worker_1_gpu_2_memtemp, worker_1_gpu_2_fan, worker_1_gpu_2_power]
 
         #Worker 1 GPU 3 data
-        worker_1_gpu_3_name = "GPU 3: RX 5700 ASUS Strix: "
+        worker_1_gpu_3_name = "GPU 3: RX 5700 XT ASUS Strix: "
         worker_1_gpu_3_hashrate = hiveos_api_keys_worker_1["gpu_stats"][3]["hash"]
         worker_1_gpu_3_power = str(hiveos_api_keys_worker_1["gpu_stats"][3]["power"]) + " W"
         worker_1_gpu_3_fan = str(hiveos_api_keys_worker_1["gpu_stats"][3]["fan"]) + " %"
@@ -89,12 +89,12 @@ def hiveos_requests():
         gpu_list = [worker_1_gpu_0_stats, worker_1_gpu_1_stats, worker_1_gpu_2_stats, worker_1_gpu_3_stats]
 
         #Worker 1
-        with open("hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
+        with open("/var/www/html/hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
             hiveos_output_file_worker_1.write(tabulate(gpu_list, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
     
     #In case of an error
     except:
-        with open("hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
+        with open("/var/www/html/hiveos_output_worker_1.txt", "w", encoding="utf-8") as hiveos_output_file_worker_1:
             hiveos_output_file_worker_1.write("+---------------+\n")
             hiveos_output_file_worker_1.write("| !!!OFFLINE!!! |\n")
             hiveos_output_file_worker_1.write("+---------------+")
@@ -191,12 +191,12 @@ def hiveos_requests():
         gpu_list_2 = [worker_2_gpu_0_stats, worker_2_gpu_1_stats, worker_2_gpu_2_stats, worker_2_gpu_3_stats, worker_2_gpu_4_stats, worker_2_gpu_5_stats, worker_2_gpu_6_stats, worker_2_gpu_7_stats]
 
         #Worker 2
-        with open("hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
+        with open("/var/www/html/hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
             hiveos_output_file_worker_2.write(tabulate(gpu_list_2, headers=["Model", "Hashrate", "Core Temp", "Mem Temp", "Fan", "Power"], tablefmt="fancy_grid"))
     
     #In case of an error
     except:
-        with open("hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
+        with open("/var/www/html/hiveos_output_worker_2.txt", "w", encoding="utf-8") as hiveos_output_file_worker_2:
             hiveos_output_file_worker_2.write("+---------------+\n")
             hiveos_output_file_worker_2.write("| !!!OFFLINE!!! |\n")
             hiveos_output_file_worker_2.write("+---------------+")
@@ -211,7 +211,7 @@ def hiveos_requests():
     total_hash = str(hashrate_format(hiveos_api_keys_farm["hashrates"][0]["hashrate"]))
     total_power = str(hiveos_api_keys_farm["stats"]["power_draw"]) + " W"
     
-    with open("hiveos_output_total.txt", "w", encoding="utf-8") as hiveos_output_file_total:
+    with open("/var/www/html/hiveos_output_total.txt", "w", encoding="utf-8") as hiveos_output_file_total:
         
         if total_gpus_offline == str(0):
             hiveos_output_file_total.write(f"GPUs online: {total_gpus}\n")
@@ -221,7 +221,7 @@ def hiveos_requests():
             
         elif total_gpus_offline >= str(0):
             hiveos_output_file_total.write(f"GPUs online: {total_gpus}\n")
-            hiveos_output_file_total.write(f"{total_gpus_offline}  <-- Something is Wrong!!!\n")
+            hiveos_output_file_total.write(f"GPUs offline: {total_gpus_offline}  <-- Something is Wrong!!!\n")
             hiveos_output_file_total.write(f"Hashrate: {total_hash}\n")
             hiveos_output_file_total.write(f"Power: {total_power}")
         
