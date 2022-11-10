@@ -68,7 +68,7 @@ def herominers_requests():
 
 
     #Printing out the data in correct form
-    with open("/var/www/htmlherominers_output.txt", "w") as file:
+    with open("/var/www/html/herominers_output.txt", "w") as file:
 
         #Hashrate data
         file.write("Hashrates:\n")
