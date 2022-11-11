@@ -4,6 +4,9 @@ from math import log, floor
 #File with sensitive information needed for the script
 import credentials
 
+#Discord webhook library
+from discord_webhook import DiscordWebhook
+
 #Function for making pretty tables
 from tabulate import tabulate
 
@@ -40,7 +43,10 @@ def hiveos_requests():
         magnitude = int(floor(log(number, k)))
         return '%.2f%s' % (number / k**magnitude, units[magnitude])
 
-
+    
+    #Discord messages via webhook
+    webhook_message = " "
+    webhook = DiscordWebhook(url=credentials.webhook_url, rate_limit_retry=True, content=webhook_message)
 
     #---------- WORKER 1 ----------#
 
@@ -98,6 +104,11 @@ def hiveos_requests():
             hiveos_output_file_worker_1.write("+---------------+\n")
             hiveos_output_file_worker_1.write("| !!!OFFLINE!!! |\n")
             hiveos_output_file_worker_1.write("+---------------+")
+        
+        #Send message to Discord
+        webhook = DiscordWebhook(url=credentials.webhook_url, rate_limit_retry=True, content="Alert! Rig 1 is offline! @everyone") 
+        webhook.execute()
+        
        
        
 
@@ -201,6 +212,9 @@ def hiveos_requests():
             hiveos_output_file_worker_2.write("| !!!OFFLINE!!! |\n")
             hiveos_output_file_worker_2.write("+---------------+")
         
+        #Send message to Discord   
+        webhook = DiscordWebhook(url=credentials.webhook_url, rate_limit_retry=True, content="Alert! Rig 2 is offline! @everyone") 
+        webhook.execute()
         
 
 
