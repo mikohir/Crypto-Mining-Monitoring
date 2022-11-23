@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+  }
+  /* Style the body */
+  body {
+    font-family: Arial;
+    margin: 0;
+    background-color: rgb(134, 134, 134);
+  }
+  
+  /* Header/logo Title */
+  .header {
+    padding: 60px;
+    text-align: center;
+    background:rgb(134, 134, 134);
+    color: white;
+    width: 100%;
+  }
+  
+  /* Style the top navigation bar */
+  .navbar {
+    display: flex;
+    background-color: #333;
+    width: 100%;
+
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+  }
+
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: rgb(255, 133, 51)
+    ;
+    color: black;
+  }
+
+  /* Dropdown from nav */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 133, 51);
+    color: black;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: rgb(255, 179, 128);
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+    /* Column container */
+  .row {  
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create two unequal columns that sits next to each other */
+  /* Sidebar/left column */
+  .side {
+    flex: 30%;
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* Main column */
+  .main {
+    flex: 70%;
+    background-color: rgb(216, 216, 216);
+    padding: 20px;
+    height: auto;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 10px;
+    text-align: center;
+    background: #333;
+    color: white;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+  
+  /* Responsive layout */
+  @media screen and (max-width: 700px) {
+    .row, .navbar, .dropdown-content {   
+      flex-direction: column;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    .footer {
+      position: static;
+    }
+  }
