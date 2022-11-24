@@ -42,12 +42,12 @@ session.headers.update(headers)
 #Bitcoin
 response_bitcoin = session.get(coins, params=bitcoin)
 bitcoin_price = str(round(json.loads(response_bitcoin.text)["data"]["1"]["quote"]["EUR"]["price"], 2)) + " €"
-bitcoin_percent_24h = str(round(json.loads(response_bitcoin.text)["data"]["1"]["quote"]["EUR"]["percent_change_24h"], 2))
-if bitcoin_percent_24h < str(-1):
+bitcoin_percent_24h = round(json.loads(response_bitcoin.text)["data"]["1"]["quote"]["EUR"]["percent_change_24h"], 2)
+if bitcoin_percent_24h < -1:
     bitcoin_percent_24h_html = f"""
     <a style="color: red;">{bitcoin_percent_24h}</a>
     """    
-elif bitcoin_percent_24h > str(1):
+elif bitcoin_percent_24h > 1:
     bitcoin_percent_24h_html = f"""
     <a style="color: green;">{bitcoin_percent_24h}</a>
     """    
@@ -58,12 +58,12 @@ else:
 #Ethereum
 response_ethereum = session.get(coins, params=ethereum)
 ethereum_price = str(round(json.loads(response_ethereum.text)["data"]["1027"]["quote"]["EUR"]["price"], 2)) + " €"
-ethereum_percent_24h = str(round(json.loads(response_ethereum.text)["data"]["1027"]["quote"]["EUR"]["percent_change_24h"], 2))
-if ethereum_percent_24h < str(-1):
+ethereum_percent_24h = round(json.loads(response_ethereum.text)["data"]["1027"]["quote"]["EUR"]["percent_change_24h"], 2)
+if ethereum_percent_24h < -1:
     ethereum_percent_24h_html = f"""
     <a style="color: red;">{ethereum_percent_24h}</a>
     """    
-elif ethereum_percent_24h > str(1):
+elif ethereum_percent_24h > 1:
     ethereum_percent_24h_html = f"""
     <a style="color: green;">{ethereum_percent_24h}</a>
     """    
@@ -76,12 +76,12 @@ else:
 response_ergo = session.get(coins, params=ergo)
 ergo_price = str(round(json.loads(response_ergo.text)["data"]["1762"]["quote"]["EUR"]["price"], 2)) + " €"
 ergo_price_number_only = json.loads(response_ergo.text)["data"]["1762"]["quote"]["EUR"]["price"]
-ergo_percent_24h = str(round(json.loads(response_ergo.text)["data"]["1762"]["quote"]["EUR"]["percent_change_24h"], 2))
-if ergo_percent_24h < str(-1):
+ergo_percent_24h = round(json.loads(response_ergo.text)["data"]["1762"]["quote"]["EUR"]["percent_change_24h"], 2)
+if ergo_percent_24h < -1:
     ergo_percent_24h_html = f"""
     <a style="color: red;">{ergo_percent_24h}</a>
     """    
-elif ergo_percent_24h > str(1):
+elif ergo_percent_24h > 1:
     ergo_percent_24h_html = f"""
     <a style="color: green;">{ergo_percent_24h}</a>
     """    
@@ -93,12 +93,12 @@ else:
 #Polkadot
 response_polkadot = session.get(coins, params=polkadot)
 polkadot_price = str(round(json.loads(response_polkadot.text)["data"]["6636"]["quote"]["EUR"]["price"], 2)) + " €"
-polkadot_percent_24h = str(round(json.loads(response_polkadot.text)["data"]["6636"]["quote"]["EUR"]["percent_change_24h"], 2))
-if polkadot_percent_24h < str(-1):
+polkadot_percent_24h = round(json.loads(response_polkadot.text)["data"]["6636"]["quote"]["EUR"]["percent_change_24h"], 2)
+if polkadot_percent_24h < -1:
     polkadot_percent_24h_html = f"""
     <a style="color: red;">{polkadot_percent_24h}</a>
     """    
-elif polkadot_percent_24h > str(1):
+elif polkadot_percent_24h > 1:
     polkadot_percent_24h_html = f"""
     <a style="color: green;">{polkadot_percent_24h}</a>
     """    
@@ -120,13 +120,13 @@ revenue_24h = float(estimated_rewards_erg) * ergo_price_number_only
 profit_24h_eur = float(estimated_rewards_erg) * ergo_price_number_only - elec_price_24h
 
 
-if profit_24h_eur > 3:
+if profit_24h_eur >= 3:
     profit_24h_eur_html = f"""
-    <a style="color: green;">{round(profit_24h_eur, 2)} €</a>
+    <a style="color: green;">{round(profit_24h_eur, 2)}</a>
     """    
 elif profit_24h_eur <= -1.5:
     profit_24h_eur_html = f"""
-    <a style="color: red;">{round(profit_24h_eur, 2)} €</a>
+    <a style="color: red;">{round(profit_24h_eur, 2)}</a>
     """    
 else:
     profit_24h_eur_html = f"""
