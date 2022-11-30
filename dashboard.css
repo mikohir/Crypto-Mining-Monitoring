@@ -1,0 +1,349 @@
+/*-------------------- Navbar----------------------- */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #24252a;
+  }
+  
+  header h1 {
+    font-size: 20px;
+    color: rgba(255, 145, 1);
+  }
+
+  .logo {
+    cursor: pointer;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: color 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: rgba(255, 145, 1);
+  }
+  
+  .cta {
+    padding: 9px 25px;
+    background-color: rgba(255, 145, 1, 0.836);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease 0s;
+  }
+  
+  .cta:hover {
+    background-color: black;
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: #24252a;
+    overflow-x: hidden;
+    transition: width 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 100%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 36px;
+    display: block;
+    transition: color 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: rgba(255, 145, 1);
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  
+
+
+
+/*-------------------------- Main---------------------------- */
+body {
+  font-family: "Arial";
+  background-image: url(./Pictures/mining_rig.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.header {
+  margin: 0;
+  padding: 10px;
+  background-color: rgb(82, 63, 45);
+}
+
+.dashboard {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: #09123ac9;
+    flex-direction: row;
+}
+
+.dashboard > div {
+  flex-basis: 20%;
+}
+
+.dashboard-tables {
+  display: flex;
+  justify-content: center;
+  background-color: #09123ac9;
+  flex-direction: row;
+}
+
+.dashboard-box {
+  display: flex;
+  margin: 0.5vw;
+  padding: 1vw;;
+  background-color: rgba(0, 0, 0, 0.527);
+  border: 2px solid rgba(255, 145, 1, 0.836);
+  color: rgba(255, 145, 1, 0.836);
+  min-height: 100%;
+  min-width: 82vw;
+  flex-grow: 0;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.dashboard-box a {
+  font-size: 2vw;
+}
+
+/* "Item" */
+.dashboard-circle {
+  margin: 0.5vw;
+  background-color: rgba(0, 0, 0, 0.527);
+  border: 2px solid rgba(255, 145, 1, 0.836);
+  height: 20vw;
+  width: 20vw;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Change content on hover */
+
+/* "label" */
+.label {
+  margin: 0.5vw;
+  background-color: rgba(0, 0, 0, 0.527);
+  border: 2px solid rgba(255, 145, 1, 0.836);
+  height: 20vw;
+  width: 20vw;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 20%;
+  text-align: center;
+  justify-content: center;
+}
+
+.label.success {
+  background-color: rgba(0, 0, 0, 0.527);
+  color: rgba(255, 145, 1, 0.836);
+}
+
+
+.dashboard-circle:hover span.align{
+  display:none;
+}
+
+span.add-label {
+  display:none;
+}
+
+.dashboard-circle:hover span.align {
+  display:none;
+}
+
+.dashboard-circle:hover span.add-label {
+  display:block;
+}
+
+/* End of hover effect change */
+
+.dashboard-circle img {
+  width: 6vw;
+  min-width: 50px;
+  margin: 0.5vw;
+}
+
+.dashboard a {
+  font-size: 22px;
+  color: rgba(255, 145, 1);
+  text-align: center;
+}
+
+.dashboard-box:hover {
+  animation: box-glow 0.5s forwards;
+}
+
+.dashboard-circle:hover, .label:hover {
+  animation: box-glow 0.5s forwards;
+}
+
+@keyframes box-glow {
+    0% {box-shadow: 0 0 0px rgba(255, 145, 1);}
+    100% {box-shadow: 0 0 12px rgba(255, 145, 1);}
+}
+
+
+@media screen and (max-width: 970px) {
+
+    .dashboard a {
+      font-size: 15px;
+    }
+
+    .dashboard-box a {
+      font-size: 18px;
+    }
+
+    .dashboard > div {
+      flex-basis: 30%;
+    }
+}
+
+@media screen and (min-width: 1560px) {
+  .dashboard a {
+    font-size: 32px
+  }
+}
+
+
+/*-------------------------- Footer --------------------------*/
+
+.footer {
+  padding: 20px 30px 20px 30px;
+  color: #2f2f2f;
+  width: 100vw;
+  background-color: #24252a;
+  position: absolute;
+  flex: 0 0 auto;
+
+}
+
+.footer-text {
+  display: flex;
+  flex-wrap: wrap;
+  color: #999;
+}
+
+
+
+/*---------------------------- Tables --------------------------*/
+
+.demTable {
+  border:1px solid rgba(255, 145, 1, 0.836);
+  border-collapse:collapse;
+  padding:5px;
+  margin-top: 20px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  font-size: 1.5vw;;
+}
+
+.demTable img{
+  min-width: 40px;
+  width: 3vw;
+}
+
+.demTable th {
+  border:1px solid rgba(255, 145, 1, 0.836);
+  padding:5px;
+  background: rgba(255, 145, 1, 0.836);
+  color: #000000;
+}
+.demTable td {
+  border:1px solid rgba(255, 145, 1, 0.836);
+  text-align:center;
+  padding:5px;
+  color: #cecece;
+}
+
+@media screen and (max-width: 970px) {
+  .demTable {
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 15px;
+  }
+}
