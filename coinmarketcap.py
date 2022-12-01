@@ -79,7 +79,7 @@ try:
 
     def coin_color(x):
         red = f"""
-        "<span style="color: red"{x}</span>
+        <span style="color: red;">{x}</span>
         """
         orange = f"""
         <span style="color: rgba(255, 145, 1);">{x}</span>
@@ -100,7 +100,7 @@ try:
 
     def profit_color(x):
         red = f"""
-        <span style="color: red">{x}</span>
+        <span style="color: red;">{x}</span>
         """
         orange = f"""
         <span style="color: yellow;">{x}</span>
