@@ -177,8 +177,6 @@ try:
         </table>
         """ 
 
-    with open("output.html", "w", encoding="utf-8") as f:
-        f.write(f"{worker_1_table}")
     
 #In case of an error
     
